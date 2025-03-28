@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  job_name: MyString
+  job_class: MyString
+  cron: MyString
+  args: MyText
+  description: MyText
+  enabled: false
+
+two:
+  job_name: MyString
+  job_class: MyString
+  cron: MyString
+  args: MyText
+  description: MyText
+  enabled: false

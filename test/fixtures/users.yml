@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: MyString
+  name: MyString
+  email: MyString
+  is_gold_member: false
+  discount_percentage: 1
+
+two:
+  user_id: MyString
+  name: MyString
+  email: MyString
+  is_gold_member: false
+  discount_percentage: 1

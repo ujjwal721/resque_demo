@@ -1,0 +1,31 @@
+# config/resque_schedule.yml
+hard_worker_job:
+  cron: "*/1 * * * *"     # Runs every minute (adjust as needed)
+  class: "HardWorker"
+  args:
+    - "Scheduled Task"
+    - 5                    # This job will sleep for 5 seconds
+  description: "This job runs every minute using Resque Scheduler."
+
+# config/resque_schedule.yml
+
+static_job:
+  cron: "*/1 * * * *"    # Run every 5 minutes
+  class: "StaticJob"      # Job class name
+  queue: default          # The queue to use
+  description: "A static job that runs every 5 minutes."
+  args: "Hello from StaticJob!"  # Arguments passed to perform
+
+dynamic_job:
+  every: ["30s"]
+  class: "DynamicJob"
+  queue: default
+  description: "A job that runs every 30 seconds"
+  args:
+    - "Hello from DynamicJob!"
+
+send_daily_notifications:
+  cron: "0 0 * * *"  # Run at midnight every day
+  class: SendNotificationJob
+  queue: notifications
+  args: ["Daily update"]
